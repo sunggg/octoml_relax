@@ -52,3 +52,6 @@ echo set\(SUMMARIZE ON\) >> config.cmake
 echo set\(HIDE_PRIVATE_SYMBOLS ON\) >> config.cmake
 echo set\(USE_PIPELINE_EXECUTOR ON\) >> config.cmake
 echo set\(USE_CUTLASS ON\) >> config.cmake
+
+# Octo-Relax
+echo set\(USE_THRUST ON\) >> config.cmake
