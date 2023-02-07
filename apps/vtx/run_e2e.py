@@ -192,7 +192,7 @@ def test_construct_onnx_graph():
     )
 
     model = helper.make_model(graph, producer_name="simple_test")
-    mod = relax.frontends.from_onnx(model)
+    mod = relax.frontend.onnx_frontend.from_onnx(model)
     mod.show()
 
 
@@ -278,7 +278,7 @@ if __name__ == "__main__":
     }
 
     with target:
-        mod = relax.frontends.from_onnx(model, shape=shape_dict)
+        mod = relax.frontend.onnx_frontend.from_onnx(model, shape=shape_dict)
     # mark layer_norm as injective
     mod["layer_norm"] = mod["layer_norm"].with_attr("op_pattern", 2)
 
